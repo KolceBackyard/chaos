@@ -1,0 +1,14 @@
+//
+// Component block
+// --------------------------------------------------
+
+.component-block {
+  // Component styles
+  & > .element {
+    // Element styles
+  }
+
+  &.-variant {
+    // My component variant
+  }
+}
