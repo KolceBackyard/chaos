@@ -1,7 +1,7 @@
 # Chaos
 Boilerplate to build static websites—Pug, Concise CSS, Jake, Livereload and an HTTP server
 
-> In Greek mythology, Chaos (Greek: Χάος) was the first thing to exist. The personification of nothingness from which all of existence sprang. Depicted as a void. — [Wikipedia](https://en.wikipedia.org/wiki/Chaos_(mythology)
+> In Greek mythology, Chaos (Greek: Χάος) was the first thing to exist. The personification of nothingness from which all of existence sprang. Depicted as a void. — [Wikipedia](https://en.wikipedia.org/wiki/Chaos_(mythology))
 
 
 ## How to use
