@@ -1,62 +1,25 @@
-desc('Compile Pug files.')
-task('pug', () => {
-  jake.exec('pug src/views --out dist/ --obj src/views/data.json --pretty', {
-    printStdout: true,
-    printStderr: true
-  }, () => {
-    complete()
-  })
-})
+const options = {
+  printStdout: true,
+  printStderr: true
+}
 
-desc('Compile Pug files.')
-task('pug:watch', () => {
-  jake.exec('pug src/views --out dist/ -w --obj src/views/data.json --pretty', {
-    printStdout: true,
-    printStderr: true
-  }, () => {
-    complete()
-  })
-})
+desc('Compile Pug files')
+task('pug', () => jake.exec('pug src/views --out dist/ --obj src/views/data.json --pretty', options))
 
-desc('Compile Concise CSS files.')
-task('concise', () => {
-  jake.exec('concisecss compile src/styles/main.scss dist/styles/main.css', {
-    printStdout: true,
-    printStderr: true
-  }, () => {
-    complete()
-  })
-})
+desc('Compile Pug files')
+task('pug:watch', () => jake.exec('pug src/views --out dist/ -w --obj src/views/data.json --pretty', options))
+
+desc('Compile Concise CSS files')
+task('concise', () => jake.exec('concisecss compile src/styles/main.scss dist/styles/main.css', options))
 
 desc('Compile styles on change')
-task('concise:watch', () => {
-  jake.exec('chokidar "src/styles/**/*.scss" -c "jake concise"', {
-    printStdout: true,
-    printStderr: true
-  }, () => {
-    complete()
-  })
-})
+task('concise:watch', () => jake.exec('chokidar "src/styles/**/*.scss" -c "jake concise"', options))
 
 desc('Start livereload server')
-task('livereload', () => {
-  jake.exec('livereload dist/ -e "js, html, css"', {
-    printStdout: true,
-    printStderr: true
-  }, () => {
-    complete()
-  })
-})
+task('livereload', () => jake.exec('livereload dist/ -e "js, html, css"', options))
 
 desc('Start HTTP server')
-task('http', () => {
-  jake.exec('http-server dist', {
-    printStdout: true,
-    printStderr: true
-  }, () => {
-    complete()
-  })
-})
+task('http', () => jake.exec('http-server dist', options))
 
 desc('Build the source files')
 task('build', () => {
@@ -64,7 +27,7 @@ task('build', () => {
   jake.Task['pug'].invoke()
 })
 
-desc('Start the development tools')
+desc('Start everything')
 task('default', () => {
   jake.Task['concise'].invoke()
   jake.Task['pug:watch'].invoke()
