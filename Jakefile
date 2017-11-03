@@ -17,15 +17,12 @@ task('http', () => jake.exec('http-server dist', options))
 
 desc('Build the source files')
 task('build', () => {
-  jake.Task['concise'].invoke()
   jake.Task['pug'].invoke()
 })
 
 desc('Start everything')
 task('default', () => {
-  jake.Task['concise'].invoke()
   jake.Task['pug:watch'].invoke()
-  jake.Task['concise:watch'].invoke()
   jake.Task['http'].invoke()
   jake.Task['livereload'].invoke()
 })
