@@ -29,9 +29,6 @@
   "homepage": "https://github.com/jameskolce/Chaos#readme",
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
-    "concise-cli": "^0.4.1",
-    "concise-utils": "^1.0.0",
-    "concise.css": "^4.0.1",
     "http-server": "^0.9.0",
     "livereload": "^0.6.0",
     "pug-cli": "github:pugjs/pug-cli#master"

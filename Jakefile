@@ -6,14 +6,8 @@ const options = {
 desc('Compile Pug files')
 task('pug', () => jake.exec('pug src/views --out dist/ --obj src/views/data.json --pretty', options))
 
-desc('Compile Pug files')
+desc('Compile Pug files and start a watcher')
 task('pug:watch', () => jake.exec('pug src/views --out dist/ -w --obj src/views/data.json --pretty', options))
-
-desc('Compile Concise CSS files')
-task('concise', () => jake.exec('concisecss compile src/styles/main.scss dist/styles/main.css', options))
-
-desc('Compile styles on change')
-task('concise:watch', () => jake.exec('chokidar "src/styles/**/*.scss" -c "jake concise"', options))
 
 desc('Start livereload server')
 task('livereload', () => jake.exec('livereload dist/ -e "js, html, css"', options))
