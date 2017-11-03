@@ -18,6 +18,6 @@ Boilerplate to build static websites: Pug, Jake, Livereload and an HTTP server.
 - `build`: Will build the source files. Won’t start any watcher or server.
 
 
-## License
+## License
 
 MIT - James Kolce
