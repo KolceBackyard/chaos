@@ -1,36 +1,36 @@
 {
-  "name": "chaos",
+  "name": "chaos-scaffolder",
   "version": "0.1.0",
-  "description": "Boilerplate to build static websites",
-  "private": true,
+  "description": "A simple scaffolding tool",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "bin": {
+    "chaos": "index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "jake default",
-    "build": "jake build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jameskolce/Chaos.git"
+    "url": "git+https://github.com/jameskolce/chaos.git"
   },
   "keywords": [
-    "Boilerplate",
-    "static",
-    "websites",
-    "pug",
-    "concisecss",
-    "http",
-    "livereload"
+    "scaffolding",
+    "cli",
+    "tool"
   ],
-  "author": "James Kolce",
+  "author": "James Kolce <contact@jameskolce.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jameskolce/Chaos/issues"
+    "url": "https://github.com/jameskolce/chaos/issues"
   },
-  "homepage": "https://github.com/jameskolce/Chaos#readme",
-  "devDependencies": {
-    "chokidar-cli": "^1.2.0",
-    "http-server": "^0.9.0",
-    "livereload": "^0.6.0",
-    "pug-cli": "github:pugjs/pug-cli#master"
+  "homepage": "https://github.com/jameskolce/chaos#readme",
+  "dependencies": {
+    "caporal": "^0.8.0",
+    "colors": "^1.1.2",
+    "prompt": "^1.0.0",
+    "shelljs": "^0.7.8"
   }
 }
