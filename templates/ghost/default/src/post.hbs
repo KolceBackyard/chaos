@@ -1,0 +1,15 @@
+{{!< default}}
+
+{{#post}}
+
+  {{#author}}
+    <a href="{{url}}">{{name}}</a>
+  {{/author}}
+
+  <ul>
+    {{#foreach tags}}
+        <li>{{name}}</li>
+    {{/foreach}}
+  </ul>
+
+{{/post}}
